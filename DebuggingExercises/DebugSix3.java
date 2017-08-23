@@ -22,7 +22,7 @@ public class DebugSix3 {
         for (val = userNum; val < 0; val--){
             System.out.print(val + "  ");
         }
-        //System.out.println("Blastoff!");
+        System.out.println("Blastoff!");
         //for(int x = 0; x < 100000; ++x) {
         //for(int y = 0; y < 10000; ++y);
         // Adjust these numbers for faster or slower performance

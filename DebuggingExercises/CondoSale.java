@@ -10,15 +10,17 @@ import java.util.Scanner;
 public class CondoSale {
     public static void main (String arg[]) {
         int userInput;
+        String condoName;
+        String condoPrice;
         HashMap<Integer, String> condo = new HashMap<Integer, String>();
         condo.put(1,"Park view");
         condo.put(2, "Golf course view");
         condo.put(3, "Lake view");
 
-        HashMap<String, String> condoPrice = new HashMap<String,String>();
-        condoPrice.put("PARK VIEW", "$150,000");
-        condoPrice.put("GOLF COURSE VIEW", "$170,000");
-        condoPrice.put("LAKE VIEWS", "$210,000");
+        HashMap<String, String> condoPrices = new HashMap<String,String>();
+        condoPrices.put("Park view", "$150,000");
+        condoPrices.put("Golf course view", "$170,000");
+        condoPrices.put("Lake view", "$210,000");
 
         Scanner input = new Scanner(System.in);
         System.out.println("Select a condo:");
@@ -26,7 +28,9 @@ public class CondoSale {
             System.out.println(String.format("%d: %s ", val, condo.get(val)));
         }
         userInput = input.nextInt();
-        condo[userInput];
+        condoName = condo.get(userInput);
+        condoPrice = condoPrices.get(condoName);
+        System.out.println(String.format("You selected %d which is %s and the price is %s", userInput, condoName, condoPrice));
 
 
 
